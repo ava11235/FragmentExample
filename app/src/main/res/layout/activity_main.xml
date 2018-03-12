@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context="com.example.stani.fragmentexample.MainActivity"
+    tools:layout_editor_absoluteY="73dp">
+
+
+    <fragment
+        android:id="@+id/menu_items_fragment"
+        class="com.example.stani.fragmentexample.DescriptionsListFragment"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="Suspicious0dp" />
+
+    <FrameLayout
+
+        android:id="@+id/fragment_container"
+        class="com.example.stani.fragmentexample.DinerMenuFragment"
+
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/menu_items_fragment"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</LinearLayout>
